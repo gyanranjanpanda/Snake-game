@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Classic Snake Game</h1>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="high-score">0</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div class="controls">
+                    <div class="control-row">
+                        <button id="up-btn" class="control-btn">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button id="left-btn" class="control-btn">←</button>
+                        <button id="down-btn" class="control-btn">↓</button>
+                        <button id="right-btn" class="control-btn">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-info">
+                <div class="game-status" id="game-status">Press SPACE to start</div>
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <ul>
+                        <li>Use arrow keys or buttons to control the snake</li>
+                        <li>Eat the red food to grow and earn points</li>
+                        <li>Don't hit the walls or yourself!</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="restart-btn" class="btn">Restart Game</button>
+            <button id="pause-btn" class="btn">Pause</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
